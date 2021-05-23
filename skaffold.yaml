@@ -1,0 +1,6 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+build:
+  artifacts:
+    - image: minimal-service
+      jib: {}

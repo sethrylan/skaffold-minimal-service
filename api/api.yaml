@@ -1,0 +1,37 @@
+openapi: 3.0.3
+info:
+  title: minimal API
+  version: 0.0.1
+paths:
+
+  ####################################
+  #
+  # /diagnoses/[{id}]
+  #
+  ####################################
+
+  /stuff:
+    get:
+      description: Returns a collection
+      operationId: get diagnoses
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stuff'
+
+components:
+  schemas:
+
+    ##################################
+    #
+    #  Diagnosis models
+    #
+    ##################################
+    Stuff:
+      type: object
+      properties:
+        yada:
+          type: string
